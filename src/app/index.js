@@ -9,6 +9,13 @@ import Contact from './screens/contact'
 @observer
 export default class App extends Component {
 
+
+
+  componentDidMount = () => {
+    window.scrollTo(0, 1);
+  }
+
+
   render() {
     return (
       <BrowserRouter>

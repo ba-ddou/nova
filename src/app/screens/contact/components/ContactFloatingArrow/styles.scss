@@ -1,0 +1,27 @@
+#banner-contactFloatingArrow {
+  position: absolute;
+  bottom: 10px;
+  height: 40px;
+  text-align: center;
+  animation: floating 1s linear infinite alternate;
+
+  p {
+    font-family: GeomanistBold;
+    font-size: 12pt;
+    color: white;
+  }
+
+  i {
+    color: white;
+    font-size: 20pt;
+  }
+}
+
+@keyframes floating {
+  from {
+    bottom: 10px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
