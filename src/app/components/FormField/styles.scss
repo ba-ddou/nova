@@ -1,0 +1,10 @@
+.genericInput {
+  width: 100%;
+  height: 40px;
+  background-color: aqua;
+  color: black;
+
+  :focus {
+    border: 1px solid black;
+  }
+}
