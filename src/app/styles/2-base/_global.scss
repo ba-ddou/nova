@@ -14,6 +14,10 @@ body {
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+* {
+  box-sizing: border-box;
+}
 #root {
   width: 100%;
   height: 100%;
@@ -22,4 +26,9 @@ body {
 .horizontal-center {
   left: 50%;
   @include transform(translateX(-50%));
+}
+
+.vertical-center {
+  top: 50%;
+  @include transform(translateY(-50%));
 }

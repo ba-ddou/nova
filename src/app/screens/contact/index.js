@@ -6,6 +6,7 @@ import store from './store'
 import Slider from '../slider'
 import logo from '../../assets/images/logotypeWhite.png'
 import ContactFloatingArrow from './components/ContactFloatingArrow'
+import ContactForm from '../contactForm'
 
 @observer
 export default class Contact extends Component {
@@ -18,7 +19,7 @@ export default class Contact extends Component {
                     <img src={logo} id="banner-logo" className="horizontal-center" />
                     <ContactFloatingArrow />
                 </div>
-
+                <ContactForm />
             </React.Fragment>
         )
     }

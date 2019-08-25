@@ -1,0 +1,28 @@
+#contactForm-sendButton {
+  width: 100%;
+  height: 40px;
+  background-color: #141414;
+  margin-top: 20;
+  border-radius: 10px;
+  position: relative;
+
+  #contactForm-sendButton-innerContainer {
+    height: 100%;
+    width: 70px;
+    position: absolute;
+    #contactForm-sendButton-text {
+      color: white;
+      font-family: GeomanistBlack;
+      font-size: 12pt;
+      position: absolute;
+      left: 0;
+    }
+
+    #contactForm-sendButton-icon {
+      color: white;
+      position: absolute;
+      font-size: 20px;
+      right: 0;
+    }
+  }
+}

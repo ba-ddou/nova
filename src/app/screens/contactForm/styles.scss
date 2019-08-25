@@ -1,0 +1,29 @@
+#contactForm {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+
+  #contactForm-header {
+    color: #141414;
+    margin-bottom: 20px;
+    #contactForm-header-title {
+      font-family: GeomanistBlack;
+      font-size: 22pt;
+    }
+
+    #contactForm-header-text {
+      font-family: "Futura LT";
+      font-size: 11pt;
+    }
+  }
+
+  #mdn {
+    position: absolute;
+    bottom: 5px;
+    color: #141414;
+    font-family: GeomanistRegular;
+    font-size: 8pt;
+    white-space: nowrap;
+  }
+}

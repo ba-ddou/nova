@@ -12,7 +12,10 @@ export default class App extends Component {
 
 
   componentDidMount = () => {
-    window.scrollTo(0, 1);
+    // setTimeout(() => {
+    //   // document.documentElement.scrollTop = 0;
+    //   window.scrollTo(0, 1)
+    // }, 5000);
   }
 
 
