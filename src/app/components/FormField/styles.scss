@@ -11,8 +11,9 @@
     border-radius: 10px;
     border: none;
     font-family: "Futura LT";
+    outline: none !important;
   }
-  .genericInputError {
+  .genericInputInfo {
     width: 100%;
     height: 20px;
   }
@@ -39,4 +40,29 @@
 
 .genericInput:focus {
   border: 1px solid #141414;
+}
+
+.genericInput-error {
+  border: 1px solid #ff6f61 !important;
+}
+
+.genericInput-validate {
+  border: 1px solid #31d2b3 !important;
+}
+.genericInputInfo {
+  margin-top: 3px;
+  .genericInputInfo-error {
+    font-family: "Futura LT";
+    color: #ff6f61;
+    font-size: 8pt;
+  }
+
+  .genericInputInfo-validate {
+    font-family: "Futura LT";
+    color: #31d2b3;
+    font-size: 8pt;
+  }
+  // i{
+  //   font-size: 10pt;
+  // }
 }
