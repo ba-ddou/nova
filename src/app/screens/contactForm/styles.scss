@@ -1,8 +1,38 @@
 #contactForm {
   width: 100vw;
   height: 100vh;
-  padding: 20px;
   position: relative;
+  padding: 20px;
+  // scroll-snap-align: start;
+  @media screen and (min-width: 480px) {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  #contactform-logo {
+    position: absolute;
+    top: 20px;
+    left: 5vw;
+    width: 80px;
+    display: none;
+    @media screen and (min-width: 480px) {
+      display: block;
+    }
+  }
+  #formInnerContainer {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 20px;
+    @media screen and (min-width: 480px) {
+      padding-left: 5vw;
+      padding-right: 5vw;
+      padding-top: 120px;
+    }
+  }
 
   #contactForm-header {
     color: #141414;
@@ -10,20 +40,53 @@
     #contactForm-header-title {
       font-family: GeomanistBlack;
       font-size: 22pt;
+      @media screen and (min-width: 480px) {
+        font-size: 18pt;
+      }
     }
 
     #contactForm-header-text {
       font-family: "Futura LT";
       font-size: 11pt;
+      @media screen and (min-width: 480px) {
+        font-size: 9pt;
+      }
     }
   }
-
-  #mdn {
+  #email {
+    @media screen and (min-width: 480px) {
+      display: inline-block !important;
+      width: 60%;
+    }
+  }
+  #phone {
+    @media screen and (min-width: 480px) {
+      display: inline-block !important;
+      width: 35%;
+      margin-left: 5%;
+    }
+    // .genericInputInfo {
+    //   background-color: #31d2b3;
+    // }
+  }
+  #mdn-container {
     position: absolute;
-    bottom: 5px;
-    color: #141414;
-    font-family: GeomanistRegular;
-    font-size: 8pt;
-    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    padding: 20px;
+    #mdn {
+      position: absolute;
+      bottom: 5px;
+      color: #141414;
+      font-family: GeomanistRegular;
+      font-size: 8pt;
+      white-space: nowrap;
+      @media screen and (min-width: 480px) {
+        font-size: 7pt;
+      }
+    }
   }
 }

@@ -4,5 +4,12 @@
   position: absolute;
   top: 0;
   left: 0;
-  text-align: center;
+  overflow: hidden;
+  #slider-wrapper {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    position: absolute;
+    transition: left 400ms ease-in-out;
+  }
 }

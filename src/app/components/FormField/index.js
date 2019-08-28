@@ -9,7 +9,7 @@ const FormField = (props) => {
     else inputClassNames = "genericInput";
 
     return (
-        <div className={"genericInputContainer " + props.type}>
+        <div id={props.id} className={"genericInputContainer " + props.type}>
             {props.type == "input-regular" ? <input
                 className={inputClassNames}
                 value={props.value}

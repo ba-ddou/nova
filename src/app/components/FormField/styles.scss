@@ -1,6 +1,5 @@
 .genericInputContainer {
   width: 100%;
-  height: 60px;
 
   .genericInput {
     width: 100%;
@@ -10,12 +9,15 @@
     color: #141414;
     border-radius: 10px;
     border: none;
-    font-family: "Futura LT";
+    font-family: GeomanistRegular;
+    font-weight: bolder;
     outline: none !important;
+    @media screen and (min-width: 480px) {
+      font-size: 9pt;
+    }
   }
   .genericInputInfo {
     width: 100%;
-    height: 20px;
   }
 }
 
@@ -25,16 +27,15 @@
 }
 
 .genericInputContainer.input-regular {
-  height: 60px;
   .genericInput {
     height: 40px;
   }
 }
 
 .genericInputContainer.input-message {
-  height: 200px;
   .genericInput {
     height: 180px;
+    resize: none;
   }
 }
 
@@ -50,19 +51,20 @@
   border: 1px solid #31d2b3 !important;
 }
 .genericInputInfo {
-  margin-top: 3px;
+  // margin-top: 2px;
+  height: 20px;
+
   .genericInputInfo-error {
     font-family: "Futura LT";
     color: #ff6f61;
     font-size: 8pt;
+    display: inline;
   }
 
   .genericInputInfo-validate {
     font-family: "Futura LT";
     color: #31d2b3;
-    font-size: 8pt;
+    font-size: 10pt;
+    display: inline;
   }
-  // i{
-  //   font-size: 10pt;
-  // }
 }

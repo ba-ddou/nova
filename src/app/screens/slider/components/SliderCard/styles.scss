@@ -1,0 +1,24 @@
+.slider-card {
+  height: 100%;
+  flex: 1;
+  position: relative;
+  .slider-card-text {
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    .slider-card-title {
+      color: white;
+      font-family: GeomanistBlack;
+      font-size: 32pt;
+      display: block;
+      margin-bottom: 15px;
+    }
+    .slider-card-description {
+      color: white;
+      font-family: GeomanistRegular;
+      font-size: 11pt;
+      //   font-weight: bolder;
+    }
+  }
+}

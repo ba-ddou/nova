@@ -10,6 +10,27 @@ import ContactForm from '../contactForm'
 
 @observer
 export default class Contact extends Component {
+    // constructor(props) {
+    //     super(props);
+    //     this.scroll = false;
+    //     window.onscroll = function (e) {
+    //         var res = this.oldScroll > this.scrollY;
+    //         this.oldScroll = this.scrollY;
+    //         if (res) {
+    //             // console.log("up");
+    //             if (!this.scroll) {
+    //                 window.scrollTo(0, 0);
+    //             }
+    //         }
+    //         else {
+    //             // console.log("down");
+    //             if (!this.scroll) {
+    //                 window.scrollTo(0, window.innerHeight);
+    //             }
+
+    //         }
+    //     }
+    // }
 
     render() {
         return (

@@ -4,6 +4,9 @@
   height: 40px;
   text-align: center;
   animation: floating 1s linear infinite alternate;
+  @media screen and (min-width: 480px) {
+    display: none;
+  }
 
   p {
     font-family: GeomanistBold;

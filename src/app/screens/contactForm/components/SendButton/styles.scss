@@ -5,6 +5,12 @@
   margin-top: 20;
   border-radius: 10px;
   position: relative;
+  cursor: pointer;
+  @media screen and (min-width: 480px) {
+    width: 130px;
+    float: right;
+    margin-top: 20px;
+  }
 
   #contactForm-sendButton-innerContainer {
     height: 100%;
@@ -16,6 +22,9 @@
       font-size: 12pt;
       position: absolute;
       left: 0;
+      @media screen and (min-width: 480px) {
+        font-size: 10pt;
+      }
     }
 
     #contactForm-sendButton-icon {
@@ -26,3 +35,21 @@
     }
   }
 }
+#contactForm-sendButton:hover {
+  // #contactForm-sendButton-icon {
+  //   animation: rotate 200s linear;
+  // }
+}
+
+// @keyframes rotate {
+//   from {
+//     -webkit-transform: rotate(0deg);
+//     -ms-transform: rotate(0deg);
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     -webkit-transform: rotate(20deg);
+//     -ms-transform: rotate(20deg);
+//     transform: rotate(20deg);
+//   }
+// }
