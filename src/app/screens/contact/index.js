@@ -7,30 +7,28 @@ import Slider from '../slider'
 import logo from '../../assets/images/logotypeWhite.png'
 import ContactFloatingArrow from './components/ContactFloatingArrow'
 import ContactForm from '../contactForm'
+import services from '../../lib/services.js'
 
 @observer
 export default class Contact extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.scroll = false;
-    //     window.onscroll = function (e) {
-    //         var res = this.oldScroll > this.scrollY;
-    //         this.oldScroll = this.scrollY;
-    //         if (res) {
-    //             // console.log("up");
-    //             if (!this.scroll) {
-    //                 window.scrollTo(0, 0);
-    //             }
-    //         }
-    //         else {
-    //             // console.log("down");
-    //             if (!this.scroll) {
-    //                 window.scrollTo(0, window.innerHeight);
-    //             }
+    constructor() {
+        super()
 
-    //         }
-    //     }
-    // }
+        this.authentication();
+    }
+
+    authentication() {
+        var token = window.localStorage.getItem('token');
+        if (!token) {
+            services.getToken((res, err) => {
+                if (res) {
+                    window.localStorage.setItem('token', res.token);
+                    // alert(res.token);
+                }
+            });
+        }
+
+    }
 
     render() {
         return (
@@ -40,7 +38,8 @@ export default class Contact extends Component {
                     <img src={logo} id="banner-logo" className="horizontal-center" />
                     <ContactFloatingArrow />
                 </div>
-                <ContactForm />
+                <ContactForm send={this.send} />
+
             </React.Fragment>
         )
     }

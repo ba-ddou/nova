@@ -1,0 +1,48 @@
+#loaderWithFeedback {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  transition: opacity 400ms ease-in-out;
+  @media screen and (min-width: 480px) {
+    width: 50%;
+  }
+  .loaderWithFeedback-colorMate {
+    background-color: white;
+    opacity: 0.9;
+    position: absolute;
+    transition: height, width 400ms ease-in-out;
+  }
+  .loaderWithFeedback-loaderContainer {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+  }
+  .requestStatus {
+    width: 40%;
+    height: 25%;
+    position: absolute;
+    .requestStatus-innerContainer {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      padding: 20px;
+      i {
+        color: #141414;
+        font-size: 40px;
+        font-weight: bolder;
+        display: block;
+        margin-bottom: 20px;
+      }
+      p {
+        color: #141414;
+        font-size: 14px;
+        font-family: GeomanistBold;
+        // white-space: nowrap;
+        display: block;
+      }
+    }
+  }
+}

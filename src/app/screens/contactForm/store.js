@@ -114,6 +114,46 @@ class store {
         if (this.fullname.length == 0) this.fullnameError = "fullname is required"
         if (this.message.length == 0) this.messageError = "please write a valid message"
     }
+
+    @computed get payload() {
+        if (!this.fullnameError && !this.emailError && !this.phoneError && !this.messageError)
+            return {
+                fullname: this.fullname,
+                email: this.email,
+                phone: this.phone,
+                message: this.message
+            }
+        else return false
+    }
+
+    @action
+    reset() {
+        this.fullname = '';
+        this.fullnameError = false;
+        this.email = ''
+        this.emailError = false;
+        this.emailValidate = false;
+        this.emailValidationTimeout = false;
+        this.phone = ''
+        this.phoneError = ''
+        this.phoneValidate = false;
+        this.phoneValidationTimeout = false;
+        this.message = '';
+        this.messageError = false;
+    }
+
+
+
+    @observable
+    loader = false;
+    @observable
+    requestStatus = false;
+    @action
+    destroyLoader() {
+        this.loader = false;
+        this.requestStatus = false;
+    }
+
 }
 
 export default new store();
