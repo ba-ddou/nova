@@ -3,7 +3,9 @@ import { observer, inject } from 'mobx-react'
 import styles from './styles.scss'
 import SliderCard from './components/SliderCard'
 import Pagination from './components/Pagination';
-
+import branding from '../../assets/images/branding.jpg'
+import web from '../../assets/images/web.jpg'
+import design from '../../assets/images/design.jpg'
 
 @observer
 export default class Slider extends Component {
@@ -36,18 +38,30 @@ export default class Slider extends Component {
                 <div id="slider-wrapper" style={{
                     left: this.state.left
                 }}>
-                    <SliderCard data={{
-                        title: "Branding",
-                        description: "Working in a deeply collaborative manner with each of our clients, we can identify what makes you different; curating a style, tone of voice, and visual identity which creates a stronger connections with your customers. "
-                    }} />
-                    <SliderCard data={{
-                        title: "Web",
-                        description: "Go digital and build your web infrastructure using cutting-edge technologies."
-                    }} />
-                    <SliderCard data={{
-                        title: "Design",
-                        description: "Communicate your ideas through captivating designs."
-                    }} />
+                    <SliderCard id="sliderCard-branding"
+                        style={{
+                            backgroundImage: `url(${branding})`
+                        }}
+                        data={{
+                            title: "Branding",
+                            description: "Working in a deeply collaborative manner with each of our clients, we can identify what makes you different; curating a style, tone of voice, and visual identity which creates a stronger connections with your customers. "
+                        }} />
+                    <SliderCard id="sliderCard-web"
+                        style={{
+                            backgroundImage: `url(${web})`
+                        }}
+                        data={{
+                            title: "Web",
+                            description: "Go digital and build your web infrastructure using cutting-edge technologies."
+                        }} />
+                    <SliderCard id="sliderCard-design"
+                        style={{
+                            backgroundImage: `url(${design})`
+                        }}
+                        data={{
+                            title: "Design",
+                            description: "Communicate your ideas through captivating designs."
+                        }} />
                 </div>
                 <Pagination position={this.state.left} />
 

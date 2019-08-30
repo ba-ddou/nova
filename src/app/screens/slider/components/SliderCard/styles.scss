@@ -2,6 +2,7 @@
   height: 100%;
   flex: 1;
   position: relative;
+  background-size: cover;
   .slider-card-text {
     width: 80%;
     position: absolute;
@@ -18,7 +19,17 @@
       color: white;
       font-family: GeomanistRegular;
       font-size: 11pt;
+      line-height: 20px;
       //   font-weight: bolder;
     }
   }
+}
+
+#sliderCard-branding {
+}
+
+#sliderCard-web {
+}
+
+#sliderCard-design {
 }

@@ -22,6 +22,7 @@ const FormField = (props) => {
                     onChange={props.onChange}
                 />}
             <div className="genericInputInfo">
+                {!props.error && !props.validate && <p style={{ visibility: "hidden" }}>placeholder</p>}
                 {props.error && <p className="genericInputInfo-error"><i className="icon ion-ios-warning"></i>{" " + props.error}</p>}
                 {!props.error && props.validate && <p className="genericInputInfo-validate"><i className="icon ion-ios-checkmark-circle-outline"></i></p>}
             </div>

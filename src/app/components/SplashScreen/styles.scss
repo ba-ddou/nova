@@ -1,0 +1,15 @@
+#splashScreen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #141414;
+  z-index: 199;
+  transition: opacity 600ms ease-in-out;
+
+  #splashScreen-logo {
+    position: absolute;
+    width: 150px;
+  }
+}

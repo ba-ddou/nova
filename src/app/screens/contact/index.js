@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { observer, inject } from 'mobx-react'
-import styles from './styles.scss'
+import './styles.scss'
 import store from './store'
 import Slider from '../slider'
 import logo from '../../assets/images/logotypeWhite.png'

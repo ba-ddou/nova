@@ -5,7 +5,7 @@ import styles from './styles.scss'
 
 const SliderCard = (props) => {
     return (
-        <div className="slider-card" style={props.style}>
+        <div id={props.id} className="slider-card" style={props.style}>
             <div className="slider-card-text">
                 <span className="slider-card-title">{props.data.title}</span>
                 <p className="slider-card-description">{props.data.description}</p>
