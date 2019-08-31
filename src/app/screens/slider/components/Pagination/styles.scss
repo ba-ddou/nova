@@ -1,21 +1,27 @@
 #sliderPagination {
-  height: 4px;
+  height: 8px;
   width: 105px;
   position: absolute;
   top: 20px;
   right: 30px;
   display: none;
+
   @media screen and (min-width: 480px) {
     display: flex !important;
   }
   .sliderPagination-block {
     flex: 1;
+    transition: flex 150ms ease-in-out;
     height: 100%;
     margin-left: 5px;
     margin-right: 5px;
     background-color: white;
     opacity: 0.5;
     border-radius: 8px;
+    cursor: pointer;
+  }
+  .sliderPagination-block:hover {
+    flex: 1.5;
   }
   .sliderPagination-block-active {
     opacity: 1 !important;
