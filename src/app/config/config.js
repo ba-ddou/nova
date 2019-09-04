@@ -1,8 +1,8 @@
 var config = {};
 
 config.endpoints = {
-    postInquiry: "/inquiry",
-    getToken: "/token"
+    postInquiry: "/api/inquiry",
+    getToken: "/api/token"
 }
 
 

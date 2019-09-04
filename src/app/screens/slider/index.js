@@ -83,15 +83,15 @@ export default class Slider extends Component {
                         }}
                         data={{
                             title: "Web",
-                            description: "Go digital and build your web infrastructure using cutting-edge technologies."
+                            description: "We develop fast, reliable and secure web apps and infrastructures using cutting-edge technologies. Your website is the hub of your online presence and we want to ensure that it provides your users with the best possible experience."
                         }} />
                     <SliderCard id="sliderCard-design"
                         style={{
                             backgroundImage: `url(${design})`
                         }}
                         data={{
-                            title: "Design",
-                            description: "Communicate your ideas through captivating designs."
+                            title: "UI/UX",
+                            description: "We translate your company's vision into interfaces and experiences that users love. Your online appearance will be seen and judged by an audience and we want to ensure you are prepared to capture their attention and hold it in place."
                         }} />
                 </div>
                 <Pagination onTabClick={this.onTabClick} position={this.state.left} />

@@ -24,7 +24,7 @@ class store {
     storeEmail(email) {
         this.email = email;
         var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        if (email.length == 1 && !this.emailValidationTimeout) {
+        if (email.length >= 1 && !this.emailValidationTimeout) {
             setTimeout(() => {
                 this.emailValidationTimeout = true;
                 if (reg.test(this.email)) {
@@ -58,7 +58,7 @@ class store {
     storePhone(phone) {
         this.phone = phone;
 
-        if (phone.length == 1 && !this.phoneValidationTimeout) {
+        if (phone.length >= 1 && !this.phoneValidationTimeout) {
             setTimeout(() => {
                 this.phoneValidationTimeout = true;
                 if (this.validatePhone(this.phone)) {

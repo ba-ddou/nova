@@ -3,6 +3,7 @@
   flex: 1;
   position: relative;
   background-size: cover;
+  background-position: center;
   .slider-card-text {
     width: 80%;
     position: absolute;
@@ -18,18 +19,11 @@
     .slider-card-description {
       color: white;
       font-family: GeomanistRegular;
-      font-size: 11pt;
+      font-size: 10pt;
       line-height: 20px;
-      //   font-weight: bolder;
+      font-weight: bolder;
+      // text-align: justify;
+      letter-spacing: 0.05em;
     }
   }
-}
-
-#sliderCard-branding {
-}
-
-#sliderCard-web {
-}
-
-#sliderCard-design {
 }
