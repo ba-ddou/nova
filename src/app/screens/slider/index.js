@@ -19,13 +19,14 @@ export default class Slider extends Component {
         this.onTabClick = this.onTabClick.bind(this);
         this.slideLeft = this.slideLeft.bind(this);
         this.slideRight = this.slideRight.bind(this);
+        this.swipeTimeout = this.swipeTimeout.bind(this);
     }
     componentDidMount = () => {
         swipe(this.slideLeft, this.slideRight);
         setTimeout(() => {
             this.setState({ left: "-200%", nextLeft: "-100%" });
         }, 2000);
-        setInterval(this.slide, 5000);
+        this.timer = setInterval(this.slide, 5000);
     }
 
     slide() {
@@ -38,7 +39,7 @@ export default class Slider extends Component {
 
     onTabClick(position) {
         // alert(position);
-
+        this.swipeTimeout();
         if (position === 0) this.setState({ left: 0, nextLeft: "-100%" })
         else if (position === "-200%") this.setState({ left: "-200%", nextLeft: "-100%" })
         else if (position === "-100%") this.setState({ left: "-100%", nextLeft: "-200%" })
@@ -46,6 +47,7 @@ export default class Slider extends Component {
     }
 
     slideLeft() {
+        this.swipeTimeout();
         this.setState((state, props) => {
             if (state.left === 0) return { left: "-100%", nextLeft: "-200%" }
             else if (state.left === "-100%") return { left: "-200%", nextLeft: "-100%" }
@@ -54,11 +56,19 @@ export default class Slider extends Component {
     }
 
     slideRight() {
+        this.swipeTimeout();
         this.setState((state, props) => {
             if (state.left === 0) return {}
             else if (state.left === "-100%") return { left: 0, nextLeft: "-100%" }
             else if (state.left === "-200%") return { left: "-100%", nextLeft: 0 }
         });
+    }
+
+    swipeTimeout() {
+        clearInterval(this.timer);
+        setTimeout(() => {
+            this.timer = setInterval(this.slide, 5000);
+        }, 16000);
     }
 
 
