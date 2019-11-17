@@ -25,15 +25,15 @@ export default class Slider extends Component {
         swipe(this.slideLeft, this.slideRight);
         setTimeout(() => {
             this.setState({ left: "-200%", nextLeft: "-100%" });
+            this.timer = setInterval(this.slide, 5000);
         }, 2000);
-        this.timer = setInterval(this.slide, 5000);
     }
 
     slide() {
         this.setState((state, props) => {
             if (state.left === 0) return { left: "-100%", nextLeft: "-200%" }
             else if (state.left === "-200%") return { left: "-100%", nextLeft: 0 }
-            else if (state.left === "-100%") return { left: state.nextLeft }
+            else if (state.left === "-100%") return { left: state.nextLeft, nextLeft: "-100%" }
         });
     }
 
@@ -65,10 +65,14 @@ export default class Slider extends Component {
     }
 
     swipeTimeout() {
-        clearInterval(this.timer);
-        setTimeout(() => {
-            this.timer = setInterval(this.slide, 5000);
-        }, 16000);
+        if (this.timer) {
+            clearInterval(this.timer);
+            this.timer = false;
+            setTimeout(() => {
+                this.timer = setInterval(this.slide, 5000);
+            }, 16000);
+        }
+
     }
 
 
